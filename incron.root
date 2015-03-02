@@ -1,0 +1,1 @@
+/etc/haproxy/haproxy.cfg IN_MODIFY sv reload haproxy

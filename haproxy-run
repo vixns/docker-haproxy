@@ -1,0 +1,4 @@
+#!/bin/sh
+exec 1> /dev/stdout
+exec 2> /dev/stderr
+exec /usr/sbin/haproxy-systemd-wrapper -f /etc/haproxy/haproxy.cfg -p /var/run/haproxy.pid
