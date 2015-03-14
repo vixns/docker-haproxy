@@ -1,4 +1,0 @@
-#!/bin/sh
-exec 1> /dev/stdout
-exec 2> /dev/stderr
-exec /usr/sbin/incrond -n -f /etc/incron.conf
