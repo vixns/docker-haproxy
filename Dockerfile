@@ -1,11 +1,7 @@
-FROM vixns/base-runit
+FROM haproxy:1.5.12
 MAINTAINER Stéphane Cottin <stephane.cottin@vixns.com>
-
-RUN \
-  export DEBIAN_FRONTEND=noninteractive && \
-  apt-get update && \
-  apt-get install --no-install-recommends --auto-remove -y haproxy && \
-  rm -rf /var/lib/apt/lists/* 
-
 RUN mkdir /run/haproxy
-ADD haproxy-run /etc/service/haproxy/run
+
+COPY haproxy-run /haproxy-run
+COPY haproxy.cfg /etc/haproxy/haproxy.cfg
+CMD ["/haproxy-run"]
