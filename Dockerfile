@@ -1,4 +1,4 @@
-FROM haproxy:1.5.12
+FROM haproxy
 MAINTAINER Stéphane Cottin <stephane.cottin@vixns.com>
 RUN mkdir /run/haproxy
 
