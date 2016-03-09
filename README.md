@@ -1,6 +1,8 @@
 # Haproxy docker image
 
-Yet another dockerized haproxy, build on top of debian jessie, with lua support and zero downtime reload.
+[![](https://badge.imagelayers.io/vixns/haproxy:latest.svg)](https://imagelayers.io/?images=vixns/haproxy:latest 'Get your own badge on imagelayers.io')
+
+Yet another dockerized haproxy, built on top of debian jessie, with lua support and zero downtime reload.
 
 ## Usage:
 
