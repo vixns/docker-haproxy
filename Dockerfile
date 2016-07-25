@@ -3,8 +3,8 @@ MAINTAINER Stéphane Cottin <stephane.cottin@vixns.com>
 RUN echo "deb http://http.debian.net/debian jessie-backports main contrib non-free" > /etc/apt/sources.list.d/backports.list && apt-get update && apt-get install -y libssl1.0.0 libpcre3 liblua5.3-0 --no-install-recommends && rm -rf /var/lib/apt/lists/*
 
 ENV HAPROXY_MAJOR 1.6
-ENV HAPROXY_VERSION 1.6.5
-ENV HAPROXY_MD5 5290f278c04e682e42ab71fed26fc082
+ENV HAPROXY_VERSION 1.6.7
+ENV HAPROXY_MD5 a046ed63b00347bd367b983529dd541f
 
 # see http://sources.debian.net/src/haproxy/1.5.8-1/debian/rules/ for some helpful navigation of the possible "make" arguments
 RUN buildDeps='curl gcc libc6-dev libpcre3-dev liblua5.3-dev libssl-dev make' \
