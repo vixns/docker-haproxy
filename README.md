@@ -1,6 +1,6 @@
 # Haproxy docker image
 
-[![](https://badge.imagelayers.io/vixns/haproxy:latest.svg)](https://imagelayers.io/?images=vixns/haproxy:latest 'Get your own badge on imagelayers.io')
+[![](https://images.microbadger.com/badges/image/vixns/haproxy.svg)](https://microbadger.com/images/vixns/haproxy "Get your own image badge on microbadger.com")
 
 Yet another dockerized haproxy, built on top of debian jessie, with lua support and zero downtime reload.
 
