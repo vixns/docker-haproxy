@@ -30,6 +30,7 @@ RUN \
 	&& apt-get purge -y --auto-remove $buildDeps 
 
 COPY haproxy.cfg /etc/haproxy/haproxy.cfg
-COPY docker-entrypoint.sh /
-ENTRYPOINT ["/docker-entrypoint.sh"]
-CMD ["haproxy", "-f", "/etc/haproxy/haproxy.cfg"]
+ADD https://github.com/krallin/tini/releases/download/v0.10.0/tini /tini
+RUN chmod +x /tini
+ENTRYPOINT ["/tini" , "--", "haproxy-systemd-wrapper", "-p",  "/run/haproxy.pid"]
+CMD ["-f", "/etc/haproxy/haproxy.cfg"]
