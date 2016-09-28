@@ -1,0 +1,2 @@
+#!/bin/sh
+exec inotifywait -qq -e close_write /etc/haproxy/haproxy.cfg
